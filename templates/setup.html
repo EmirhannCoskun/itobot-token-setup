@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>İTOBOT | Token Kurulumu</title>
+
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/base.css') }}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/setup.css') }}"
+    >
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="page">
+
+        <section class="setup-card">
+
+            <!-- BRAND -->
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    <span>ITO</span>
+                    <span>BOT</span>
+                </div>
+
+                <div class="brand-text">
+                    <span class="brand-name">İTOBOT</span>
+                    <span class="brand-subtitle">
+                        GRANT TRACKER
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <!-- CONTENT -->
+
+            <div class="content">
+
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    İlk Kurulum
+                </div>
+
+
+                <h1>
+                    Telegram botunuzu
+                    <span>bağlayın.</span>
+                </h1>
+
+
+                <p class="description">
+                    İTOBOT'u kullanmaya başlamak için Telegram Bot
+                    Tokenınızı girin. Tokenınız yalnızca bu bilgisayarda
+                    saklanır.
+                </p>
+
+
+                <!-- TOKEN FORM -->
+
+                <form id="tokenForm">
+
+                    <div class="form-group">
+
+                        <label for="token">
+                            Telegram Bot Token
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <!-- LOCK ICON -->
+
+                            <svg
+                                class="input-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <rect
+                                    x="3"
+                                    y="11"
+                                    width="18"
+                                    height="10"
+                                    rx="2"
+                                ></rect>
+
+                                <path
+                                    d="M7 11V7a5 5 0 0 1 10 0v4"
+                                ></path>
+                            </svg>
+
+
+                            <!-- TOKEN INPUT -->
+
+                            <input
+                                type="password"
+                                id="token"
+                                name="token"
+                                placeholder="123456789:AA..."
+                                autocomplete="off"
+                                spellcheck="false"
+                            >
+
+
+                            <!-- SHOW / HIDE -->
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="togglePassword"
+                                aria-label="Tokenı göster"
+                            >
+
+                                <svg
+                                    id="eyeIcon"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                >
+
+                                    <path
+                                        d="M2 12s3.5-6 10-6
+                                           10 6 10 6-3.5 6-10 6
+                                           S2 12 2 12Z"
+                                    ></path>
+
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="2.5"
+                                    ></circle>
+
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+
+                        <span class="input-hint">
+                            Tokenınızı Telegram'daki
+                            @BotFather üzerinden alabilirsiniz.
+                        </span>
+
+                    </div>
+
+
+                    <!-- SAVE BUTTON -->
+
+                    <button
+                        type="submit"
+                        id="saveButton"
+                        class="save-button"
+                    >
+
+                        <span>
+                            Tokenı Kaydet
+                        </span>
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <path d="M5 12h14"></path>
+
+                            <path d="m13 6 6 6-6 6"></path>
+
+                        </svg>
+
+                    </button>
+
+                </form>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="message"
+                    class="message"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="footer">
+
+                <div class="security">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    >
+
+                        <path
+                            d="M12 3 4.5 6v5.5
+                               c0 4.4 3.1 8.4 7.5 9.5
+                               4.4-1.1 7.5-5.1 7.5-9.5V6L12 3Z"
+                        ></path>
+
+                        <path
+                            d="m9 12 2 2 4-4"
+                        ></path>
+
+                    </svg>
+
+                    <span>
+                        Tokenınız local olarak korunur
+                    </span>
+
+                </div>
+
+
+                <span class="version">
+                    İTOBOT Grant Tracker
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="{{ url_for('static', filename='js/setup.js') }}"
+    ></script>
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+/* ========================================
+   İTOBOT GRANT TRACKER
+   Base Styles
+======================================== */
+
+:root {
+    --bg-primary: #080a0f;
+    --bg-secondary: #0d1017;
+    --card-bg: rgba(18, 21, 30, 0.88);
+
+    --text-primary: #f1f3f8;
+    --text-secondary: #9ba3b5;
+    --text-muted: #687186;
+
+    --accent: #7c5cff;
+    --accent-light: #9a84ff;
+
+    --success: #62d99a;
+
+    --border: rgba(255, 255, 255, 0.08);
+    --border-light: rgba(255, 255, 255, 0.12);
+
+    --shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+
+    --radius-card: 20px;
+    --radius-input: 12px;
+    --radius-button: 12px;
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   HTML / BODY
+======================================== */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: var(--text-primary);
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(124, 92, 255, 0.10),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(98, 217, 154, 0.05),
+            transparent 28%
+        ),
+        var(--bg-primary);
+
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   PAGE
+======================================== */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+
+    position: relative;
+}
+
+
+/* ========================================
+   BACKGROUND GLOW
+======================================== */
+
+.background-glow {
+    position: fixed;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+    opacity: 0.16;
+}
+
+.glow-one {
+    top: -180px;
+    left: -150px;
+
+    background: var(--accent);
+}
+
+.glow-two {
+    right: -180px;
+    bottom: -180px;
+
+    background: var(--success);
+}
+
+
+/* ========================================
+   SETUP CARD
+======================================== */
+
+.setup-card {
+    width: 100%;
+    max-width: 520px;
+
+    position: relative;
+    z-index: 1;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-card);
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 25px 30px;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-light)
+    );
+
+    color: white;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    box-shadow:
+        0 8px 25px rgba(124, 92, 255, 0.25);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.brand-name {
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+.brand-subtitle {
+    color: var(--text-muted);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.divider {
+    width: 100%;
+    height: 1px;
+
+    background: var(--border);
+}
+
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+h1 {
+    font-size: 32px;
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+h1 span {
+    color: var(--accent-light);
+}
+
+.description {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BADGE
+======================================== */
+
+.badge {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 11px;
+
+    border: 1px solid rgba(124, 92, 255, 0.20);
+
+    border-radius: 999px;
+
+    background: rgba(124, 92, 255, 0.08);
+
+    color: #b7adff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--accent-light);
+
+    box-shadow:
+        0 0 10px rgba(154, 132, 255, 0.8);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 30px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+}
+
+.security {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.security svg {
+    width: 14px;
+    height: 14px;
+
+    color: var(--success);
+}
+
+.version {
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   MESSAGE
+======================================== */
+
+.message {
+    min-height: 20px;
+
+    margin-top: 14px;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   RESPONSIVE BASE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .brand {
+        padding: 21px;
+    }
+
+    .footer {
+        padding: 15px 21px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}

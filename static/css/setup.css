@@ -1,0 +1,330 @@
+/* ========================================
+   İTOBOT GRANT TRACKER
+   Setup Page Styles
+======================================== */
+
+
+/* ========================================
+   SETUP CONTENT
+======================================== */
+
+.content {
+    padding: 38px 30px 34px;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.content .badge {
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    margin-bottom: 14px;
+}
+
+.content .description {
+    max-width: 440px;
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+#tokenForm {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    color: var(--text-primary);
+
+    font-size: 12px;
+    font-weight: 650;
+
+    letter-spacing: 0.01em;
+}
+
+
+/* ========================================
+   INPUT WRAPPER
+======================================== */
+
+.input-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+}
+
+
+/* ========================================
+   INPUT ICON
+======================================== */
+
+.input-icon {
+    position: absolute;
+
+    left: 15px;
+
+    width: 18px;
+    height: 18px;
+
+    color: var(--text-muted);
+
+    pointer-events: none;
+
+    transition: color 0.2s ease;
+}
+
+
+/* ========================================
+   TOKEN INPUT
+======================================== */
+
+.input-wrapper input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 48px 0 45px;
+
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-input);
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: var(--text-primary);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #50586b;
+
+    opacity: 1;
+}
+
+.input-wrapper input:hover {
+    border-color: rgba(255, 255, 255, 0.17);
+}
+
+.input-wrapper input:focus {
+    border-color: rgba(124, 92, 255, 0.65);
+
+    background: rgba(124, 92, 255, 0.035);
+
+    box-shadow:
+        0 0 0 4px rgba(124, 92, 255, 0.08);
+}
+
+.input-wrapper:focus-within .input-icon {
+    color: var(--accent-light);
+}
+
+
+/* ========================================
+   SHOW / HIDE PASSWORD BUTTON
+======================================== */
+
+.toggle-password {
+    position: absolute;
+
+    right: 8px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--text-muted);
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.toggle-password:hover {
+    color: var(--text-primary);
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.toggle-password:active {
+    transform: scale(0.95);
+}
+
+.toggle-password svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* ========================================
+   INPUT HINT
+======================================== */
+
+.input-hint {
+    color: var(--text-muted);
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   SAVE BUTTON
+======================================== */
+
+.save-button {
+    width: 100%;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 9px;
+
+    border: none;
+    border-radius: var(--radius-button);
+
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-light)
+    );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 28px rgba(124, 92, 255, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.save-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 14px 32px rgba(124, 92, 255, 0.30);
+}
+
+.save-button:active {
+    transform: translateY(0);
+}
+
+.save-button:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.65;
+
+    transform: none;
+
+    box-shadow:
+        0 8px 20px rgba(124, 92, 255, 0.12);
+}
+
+.save-button svg {
+    width: 17px;
+    height: 17px;
+
+    transition: transform 0.2s ease;
+}
+
+.save-button:not(:disabled):hover svg {
+    transform: translateX(3px);
+}
+
+
+/* ========================================
+   MESSAGE STATES
+======================================== */
+
+#message {
+    min-height: 18px;
+
+    margin-top: 14px;
+    margin-bottom: 0;
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+#message.success {
+    color: var(--success);
+}
+
+#message.error {
+    color: #ff7272;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .content {
+        padding: 31px 21px 28px;
+    }
+
+    .content .description {
+        margin-bottom: 25px;
+    }
+
+    .input-wrapper input {
+        height: 50px;
+    }
+
+    .save-button {
+        height: 50px;
+    }
+}
